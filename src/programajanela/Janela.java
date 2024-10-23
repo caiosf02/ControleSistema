@@ -14,7 +14,7 @@ import javax.swing.SwingUtilities;
 
 /**
  *
- * @author Thales
+ * @author caio
  */
 public class Janela extends javax.swing.JFrame {
     private static JFrame frame2;
@@ -108,7 +108,7 @@ public class Janela extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jButton2.setText("Adicionar e Selecionar Plano de Desempenho máximo");
+        jButton2.setText("Adicionar e Selecionar Plano de Desempenho mÃ¡ximo");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -276,7 +276,7 @@ public class Janela extends javax.swing.JFrame {
             builder.redirectErrorStream(true);
             Process process = builder.start();
 
-            // Ler a saída do processo
+            // Ler a saÃ­da do processo
              BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));    
              StringBuilder output = new StringBuilder();
              String line;
@@ -284,12 +284,12 @@ public class Janela extends javax.swing.JFrame {
                 System.out.println(line);
                 output.append(line).append("\n");
              }
-            // Armazenar a saída em uma variável
+            // Armazenar a saÃ­da em uma variÃ¡vel
             texto = output.toString();
             
-            // Aguardar o término do processo
+            // Aguardar o tÃ©rmino do processo
             int exitCode = process.waitFor();
-            System.out.println("Comando executado com código de saída: " + exitCode);
+            System.out.println("Comando executado com cÃ³digo de saÃ­da: " + exitCode);
         } catch (IOException | InterruptedException ex) {
             ex.printStackTrace();
         }
@@ -318,7 +318,7 @@ public class Janela extends javax.swing.JFrame {
             builder.redirectErrorStream(true);
             Process process = builder.start();
 
-            // Ler a saída do processo
+            // Ler a saÃ­da do processo
              BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));    
              StringBuilder output = new StringBuilder();
              String line;
@@ -326,14 +326,14 @@ public class Janela extends javax.swing.JFrame {
                 System.out.println(line);
                 output.append(line).append("\n");
              }
-            // Armazenar a saída em uma variável
+            // Armazenar a saÃ­da em uma variÃ¡vel
             texto = output.toString();
             
             // Extrair o GUID do texto
             String guid = extractGUID(texto);
-            System.out.println("GUID extraído: " + guid);
+            System.out.println("GUID extraÃ­do: " + guid);
             
-            // Copiar o GUID para a área de transferência caso queira colar em outro lugar.
+            // Copiar o GUID para a Ã¡rea de transferÃªncia caso queira colar em outro lugar.
             copyToClipboard(guid);
         
             // Exibir o GUID no JTextArea
@@ -345,11 +345,11 @@ public class Janela extends javax.swing.JFrame {
             ProcessBuilder builder2 = new ProcessBuilder("cmd.exe", "/c", comando2);
             builder2.redirectErrorStream(true);
             builder2.start();
-            jTextArea1.setText(texto +"\nGUID extraído: " + guid+ "\n\nPlano de Energia de Desempenho máximo Selecionado!");
+            jTextArea1.setText(texto +"\nGUID extraÃ­do: " + guid+ "\n\nPlano de Energia de Desempenho mÃ¡ximo Selecionado!");
             
-            // Aguardar o término do processo
+            // Aguardar o tÃ©rmino do processo
             int exitCode = process.waitFor();
-            System.out.println("Comando executado com código de saída: " + exitCode);
+            System.out.println("Comando executado com cÃ³digo de saÃ­da: " + exitCode);
         } catch (IOException | InterruptedException ex) {
             ex.printStackTrace();
         }
@@ -366,7 +366,7 @@ public class Janela extends javax.swing.JFrame {
         return "";
     }
         
-    //Copiar para área de transferencia do sistema o valor encontrado na váriavel guid
+    //Copiar para Ã¡rea de transferencia do sistema o valor encontrado na vÃ¡riavel guid
     private void copyToClipboard(String text) {
         java.awt.datatransfer.Clipboard clipboard = java.awt.Toolkit.getDefaultToolkit().getSystemClipboard();
         java.awt.datatransfer.StringSelection selection = new java.awt.datatransfer.StringSelection(text);
@@ -390,7 +390,7 @@ public class Janela extends javax.swing.JFrame {
             builder.redirectErrorStream(true);
             Process process = builder.start();
 
-            // Ler a saída do processo
+            // Ler a saÃ­da do processo
              BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));    
              StringBuilder output = new StringBuilder();
              String line;
@@ -398,12 +398,12 @@ public class Janela extends javax.swing.JFrame {
                 System.out.println(line);
                 output.append(line).append("\n");
              }
-            // Armazenar a saída em uma variável
+            // Armazenar a saÃ­da em uma variÃ¡vel
             texto = output.toString();
             
-            // Aguardar o término do processo
+            // Aguardar o tÃ©rmino do processo
             int exitCode = process.waitFor();
-            System.out.println("Comando executado com código de saída: " + exitCode);
+            System.out.println("Comando executado com cÃ³digo de saÃ­da: " + exitCode);
             
             SwingUtilities.invokeLater(() -> {
                 StringBuilder formattedText = new StringBuilder();
@@ -412,7 +412,7 @@ public class Janela extends javax.swing.JFrame {
                 }
                 jTextArea1.setText(formattedText.toString());
 
-                // Preencher a barra de progresso até 100%
+                // Preencher a barra de progresso atÃ© 100%
                 jProgressBar1.setIndeterminate(false);
                 jProgressBar1.setValue(100);
             });
@@ -436,7 +436,7 @@ public class Janela extends javax.swing.JFrame {
             builder.redirectErrorStream(true);
             Process process = builder.start();
 
-            // Ler a saída do processo
+            // Ler a saÃ­da do processo
              BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));    
              StringBuilder output = new StringBuilder();
              String line;
@@ -444,12 +444,12 @@ public class Janela extends javax.swing.JFrame {
                 System.out.println(line);
                 output.append(line).append("\n");
              }
-            // Armazenar a saída em uma variável
+            // Armazenar a saÃ­da em uma variÃ¡vel
             texto = output.toString();
             
-            // Aguardar o término do processo
+            // Aguardar o tÃ©rmino do processo
             int exitCode = process.waitFor();
-            System.out.println("Comando executado com código de saída: " + exitCode);
+            System.out.println("Comando executado com cÃ³digo de saÃ­da: " + exitCode);
         } catch (IOException | InterruptedException ex) {
             ex.printStackTrace();
         }
@@ -471,7 +471,7 @@ public class Janela extends javax.swing.JFrame {
             builder.redirectErrorStream(true);
             Process process = builder.start();
 
-            // Ler a saída do processo
+            // Ler a saÃ­da do processo
              BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));    
              StringBuilder output = new StringBuilder();
              String line;
@@ -479,12 +479,12 @@ public class Janela extends javax.swing.JFrame {
                 System.out.println(line);
                 output.append(line).append("\n");
              }
-            // Armazenar a saída em uma variável
+            // Armazenar a saÃ­da em uma variÃ¡vel
             texto = output.toString();
             
-            // Aguardar o término do processo
+            // Aguardar o tÃ©rmino do processo
             int exitCode = process.waitFor();
-            System.out.println("Comando executado com código de saída: " + exitCode);
+            System.out.println("Comando executado com cÃ³digo de saÃ­da: " + exitCode);
         } catch (IOException | InterruptedException ex) {
             ex.printStackTrace();
         }
@@ -522,7 +522,7 @@ public class Janela extends javax.swing.JFrame {
             builder.redirectErrorStream(true);
             Process process = builder.start();
 
-            // Ler a saída do processo
+            // Ler a saÃ­da do processo
              BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));    
              StringBuilder output = new StringBuilder();
              String line;
@@ -530,12 +530,12 @@ public class Janela extends javax.swing.JFrame {
                 System.out.println(line);
                 output.append(line).append("\n");
              }
-            // Armazenar a saída em uma variável
+            // Armazenar a saÃ­da em uma variÃ¡vel
             texto = output.toString();
             
-            // Aguardar o término do processo
+            // Aguardar o tÃ©rmino do processo
             int exitCode = process.waitFor();
-            System.out.println("Comando executado com código de saída: " + exitCode);
+            System.out.println("Comando executado com cÃ³digo de saÃ­da: " + exitCode);
             
             SwingUtilities.invokeLater(() -> {
                 StringBuilder formattedText = new StringBuilder();
@@ -544,7 +544,7 @@ public class Janela extends javax.swing.JFrame {
                 }
                 jTextArea1.setText(formattedText.toString());
 
-                // Preencher a barra de progresso até 100%
+                // Preencher a barra de progresso atÃ© 100%
                 jProgressBar2.setIndeterminate(false);
                 jProgressBar2.setValue(100);
             });
