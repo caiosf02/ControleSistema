@@ -1,2 +1,4 @@
-# ControleSistema
-Projeto simples para puxar informações do sistema e aplicar perfis de energia.
+# Controle Do Sistema
+Requer JDK 8
+
+Baixe a ultima versão [aqui](https://github.com/Thalescrz/ControleDoSistema/releases/latest).
